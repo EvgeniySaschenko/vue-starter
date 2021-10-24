@@ -1,10 +1,11 @@
 <template lang="pug">
 include /src/assets/pug/index.pug
-+b.NAV.nav
-  +e.item
-    +e.ROUTER-LINK.link(to="/") Home
-  +e.item
-    +e.ROUTER-LINK.link(to="/login") Login
+.navbar.navbar-expand-lg.navbar-light.bg-lightc
+  .navbar-nav
+    .nav-item
+      router-link.nav-link(to="/") Home
+    .nav-item
+      router-link.nav-link(to="/login") Login
 router-view
 </template>
 

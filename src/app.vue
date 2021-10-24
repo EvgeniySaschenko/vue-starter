@@ -1,6 +1,6 @@
 <template lang="pug">
 include /src/assets/pug/index.pug
-.wrapper
+.wrapper.container
   app-nav
 </template>
 
@@ -15,5 +15,5 @@ export default {
 </script>
 
 <style lang="sass">
-@import @/assets/style/style.sass
+@import "@/assets/style/style.sass"
 </style>
