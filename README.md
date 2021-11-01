@@ -15,6 +15,15 @@ This assembly is based on vue-cli, **Vue 3 core** library. The assembly contains
 `vue-cookie-next`
 
 
+## Plugins from Visual Studio Code
+
+For automatic formatting and code / error highlighting to work, you need to install such plugins:
+
+- `dbaeumer.vscode-eslint`
+- `esbenp.prettier-vscode`
+- `syler.sass-indented`
+- `octref.vetur`
+
 ## Project setup
 ```
 yarn install
