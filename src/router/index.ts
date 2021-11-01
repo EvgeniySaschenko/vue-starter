@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import home from "@/pages/home/home.vue";
+import home from "@/views/home/home.vue";
 import { VueCookieNext } from "vue-cookie-next";
 let isAuth = VueCookieNext.getCookie("user");
 
@@ -12,7 +12,7 @@ let routes = [
   {
     path: "/login",
     name: "Login",
-    component: () => import("@/pages/login/login.vue"),
+    component: () => import("@/views/login/login.vue"),
   },
 ];
 

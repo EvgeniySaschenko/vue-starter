@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 createApp(App)
   .use(VueAxios, axios)
-  .use(createI18n())
+  .use(createI18n({}))
   .use(VueCookieNext)
   .use(store)
   .use(router)
