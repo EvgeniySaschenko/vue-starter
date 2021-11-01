@@ -2,7 +2,7 @@
 
 ## Description
 
-This assembly is based on vue-cli, vue 3 core library. The assembly contains such packages: 
+This assembly is based on vue-cli, **Vue 3 core** library. The assembly contains such packages: 
 
 `vue-class-component`
 `bootstrap`

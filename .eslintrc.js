@@ -23,6 +23,7 @@ module.exports = {
     "prefer-const": "off",
     "no-unused-vars": "warn",
     "unicorn/error-message": "off",
+    "@typescript-eslint/no-var-requires": "off",
     eqeqeq: "warn",
   },
 
