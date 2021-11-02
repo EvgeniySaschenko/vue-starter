@@ -3,7 +3,6 @@ include /src/assets/pug/index.pug
 .wrapper.container
   app-svg-symbol
   app-nav
-  +svg-symbol('vue-comments-symbol-icon-image', 'cls')
 </template>
 
 <script lang="ts">
@@ -17,11 +16,7 @@ import AppSvgSymbol from "@/components/svg-symbol/svg-symbol.vue";
     AppSvgSymbol,
   },
 })
-export default class App extends Vue {
-  add(): void {
-    console.log(11);
-  }
-}
+export default class App extends Vue {}
 </script>
 
 <style lang="sass">
