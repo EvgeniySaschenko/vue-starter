@@ -9,6 +9,6 @@ include /src/assets/pug/index.pug
 router-view
 </template>
 
-<script>
+<script lang="ts">
 export default {};
 </script>
