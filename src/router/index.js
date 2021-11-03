@@ -22,12 +22,12 @@ let router = createRouter({
 });
 
 // Если пользователь не авторизирован
-router.beforeEach((to, from, next) => {
-  if (!isAuth && to.name !== "Login") {
-    next({ path: "/login" });
-  } else {
-    next();
-  }
-});
+// router.beforeEach((to, from, next) => {
+//   if (!isAuth && to.name !== "Login") {
+//     next({ path: "/login" });
+//   } else {
+//     next();
+//   }
+// });
 
 export default router;
