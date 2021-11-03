@@ -5,18 +5,16 @@ include /src/assets/pug/index.pug
   app-nav
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
+<script>
 import AppNav from "@/components/nav/nav.vue";
 import AppSvgSymbol from "@/components/svg-symbol/svg-symbol.vue";
 
-@Options({
+export default {
   components: {
     AppNav,
     AppSvgSymbol,
   },
-})
-export default class App extends Vue {}
+};
 </script>
 
 <style lang="sass">
