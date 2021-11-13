@@ -25,6 +25,7 @@ module.exports = {
     "unicorn/error-message": "off",
     "@typescript-eslint/no-var-requires": "off",
     eqeqeq: "warn",
+    "no-var": "error",
   },
 
   overrides: [
