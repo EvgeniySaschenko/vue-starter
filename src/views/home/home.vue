@@ -4,6 +4,6 @@ include /src/assets/pug/index.pug
   +e.H1.title Home page
 </template>
 
-<script>
+<script lang="ts">
 export default {};
 </script>

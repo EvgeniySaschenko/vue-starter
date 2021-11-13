@@ -5,6 +5,6 @@ include /src/assets/pug/index.pug
   +e.description The router redirects the user to the login page. Because the user does not have a cookie named "user" installed.
 </template>
 
-<script>
+<script lang="ts">
 export default {};
 </script>

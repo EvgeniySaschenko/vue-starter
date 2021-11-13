@@ -5,7 +5,7 @@ el-menu(:default-active="$route.path", mode="horizontal")
     router-link.nav-link(:to="item.url") {{ item.name }}
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "menu-main",
   data() {
