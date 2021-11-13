@@ -5,13 +5,14 @@ import router from "./router";
 import store from "./store";
 import VueAxios from "vue-axios";
 import axios from "axios";
-import { createI18n } from "vue-i18n";
 import { VueCookieNext } from "vue-cookie-next";
-import "bootstrap/dist/css/bootstrap.min.css";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 createApp(App)
   .use(VueAxios, axios)
-  .use(createI18n({}))
+  .use(ElementPlus)
   .use(VueCookieNext)
   .use(store)
   .use(router)

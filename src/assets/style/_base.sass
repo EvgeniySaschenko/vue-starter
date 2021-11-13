@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic')
-
 *
-    box-sizing: border-box
+  box-sizing: border-box
 
 img
-    max-width: 100%
-    height: auto
+  max-width: 100%
+  height: auto
 
 body
-    font-family: 'Open Sans', Arial, sans-serif
-    font-weight: 400
-    font-size: 16px
-    overflow-x: hidden
+  font-family: Arial, sans-serif
+  font-weight: 400
+  font-size: 16px
+  overflow-x: hidden
 
 a
-    text-decoration: none
-    &:hover
-        transition-duration: .3s
+  text-decoration: none
+  &:hover
+    transition-duration: .3s
 
 button,
 input
@@ -24,15 +22,24 @@ input
 
 button,
 input[type="submit"]
-    cursor: pointer
+  cursor: pointer
 
 .wrapper
-    margin: 0 auto
-    position: relative
+  margin: 0 auto
+  position: relative
 
 .container
-    max-width: 1140px
+  width: 100%
+  margin: 0 auto
+  padding: 0 10px
+  box-sizing: border-box
+  @include screen-xs()
     width: 100%
-    margin: 0 auto
-    padding: 0 10px
-    box-sizing: border-box
+  @include screen-sm()
+    width: 540px
+  @include screen-md()
+    width: 720px
+  @include screen-lg()
+    width: 960px
+  @include screen-xl()
+    width: 1140px

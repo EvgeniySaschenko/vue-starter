@@ -1,18 +1,22 @@
 <template lang="pug">
 include /src/assets/pug/index.pug
-.wrapper.container
+.wrapper
   app-svg-symbol
-  app-nav
+  .container
+    el-header
+      menu-main
+    el-footer
+    router-view
 </template>
 
 <script>
-import AppNav from "@/components/nav/nav.vue";
 import AppSvgSymbol from "@/components/svg-symbol/svg-symbol.vue";
+import MenuMain from "@/components/menu-main/menu-main.vue";
 
 export default {
   components: {
-    AppNav,
     AppSvgSymbol,
+    MenuMain,
   },
 };
 </script>

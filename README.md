@@ -4,7 +4,8 @@
 
 This assembly is based on vue-cli, **Vue 3** core library. The assembly contains such packages: 
 
-`bootstrap`
+`bootstrap-icons`
+`element-plus`
 `node-sass`
 `pug`
 `bemto.pug`
