@@ -10,7 +10,17 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Заглушка для i18n
+let translete = {
+  install: (app: any) => {
+    app.config.globalProperties.$t = (key: string) => {
+      return key;
+    };
+  },
+};
+
 createApp(App)
+  .use(translete)
   .use(VueAxios, axios)
   .use(ElementPlus)
   .use(VueCookieNext)
