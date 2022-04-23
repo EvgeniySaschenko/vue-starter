@@ -5,25 +5,23 @@ import router from "./router";
 import store from "./store";
 import VueAxios from "vue-axios";
 import axios from "axios";
-import { VueCookieNext } from "vue-cookie-next";
+import VueCookies from "vue-cookies";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { createI18n } from "vue-i18n";
 
-// Заглушка для i18n
-let translete = {
-  install: (app: any) => {
-    app.config.globalProperties.$t = (key: string) => {
-      return key;
-    };
-  },
-};
+// i18n
+let i18n = createI18n({
+  locale: "ru",
+  silentTranslationWarn: true,
+});
 
 createApp(App)
-  .use(translete)
+  .use(i18n)
   .use(VueAxios, axios)
   .use(ElementPlus)
-  .use(VueCookieNext)
+  .use(VueCookies)
   .use(store)
   .use(router)
   .mount("#app");

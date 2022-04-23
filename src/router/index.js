@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import home from "@/views/home/home.vue";
-import { VueCookieNext } from "vue-cookie-next";
-let isAuth = VueCookieNext.getCookie("user");
+import VueCookies from "vue-cookies";
+let isAuth = VueCookies.get("user");
 
 let routes = [
   {
