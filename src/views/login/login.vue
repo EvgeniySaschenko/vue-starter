@@ -1,10 +1,25 @@
 <template lang="pug">
-include /src/assets/pug/index.pug
-+b.page--login
-  +e.H1.title Login page
-  +e.description The router redirects the user to the login page. Because the user does not have a cookie named "user" installed.
+include /lib.pug
++b.page.container
+  +e.box login
 </template>
 
 <script lang="ts">
-export default {};
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "page-login",
+});
 </script>
+
+<style lang="sass" scoped>
+.page
+  min-height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  &__box-auth
+    text-align: center
+    width: 100%
+    max-width: 400px
+</style>

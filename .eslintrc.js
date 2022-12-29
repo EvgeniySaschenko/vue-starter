@@ -1,25 +1,23 @@
+let isProduction = process.env.NODE_ENV === "production";
+
 module.exports = {
   root: true,
-
   env: {
     node: true,
   },
-
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/typescript/recommended",
-    "@vue/prettier",
-    "@vue/prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
   ],
-
+  plugins: ["prettier"],
   parserOptions: {
-    parser: "@typescript-eslint/parser",
+    ecmaVersion: 2020,
   },
-
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-console": isProduction ? "warn" : "off",
+    "no-debugger": isProduction ? "warn" : "off",
     "prefer-const": "off",
     "no-unused-vars": "warn",
     "unicorn/error-message": "off",
@@ -27,7 +25,6 @@ module.exports = {
     eqeqeq: "warn",
     "no-var": "error",
   },
-
   overrides: [
     {
       files: ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],

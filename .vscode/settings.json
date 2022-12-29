@@ -1,12 +1,12 @@
 {
   "eslint.validate": ["vue", "javascript"],
+  // Форматировать при сохранении
+  "editor.formatOnSave": true,
   // Расшырение для форматирования
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
   },
-  // Форматировать при сохранении
-  "editor.formatOnSave": true,
   // Размер отступа
   "editor.tabSize": 2,
   // Использовать пробелы

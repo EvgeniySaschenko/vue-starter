@@ -1,27 +1,18 @@
 import { createApp } from "vue";
-import App from "./app.vue";
-import "./registerServiceWorker";
-import router from "./router";
-import store from "./store";
-import VueAxios from "vue-axios";
-import axios from "axios";
-import VueCookies from "vue-cookies";
-import ElementPlus from "element-plus";
-import "element-plus/dist/index.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import { createI18n } from "vue-i18n";
+import App from "./App.vue";
+import "@/registerServiceWorker";
+import router from "@/router";
+import { createPinia } from "pinia";
 
-// i18n
-let i18n = createI18n({
-  locale: "ru",
-  silentTranslationWarn: true,
+// plugins
+import pluginElementPlus from "@/plugins/element-plus";
+import pluginApi, { $api, $fetch } from "@/plugins/api";
+
+let pinia = createPinia();
+
+pinia.use(({ store }) => {
+  store.$fetch = $fetch;
+  store.$api = $api;
 });
 
-createApp(App)
-  .use(i18n)
-  .use(VueAxios, axios)
-  .use(ElementPlus)
-  .use(VueCookies)
-  .use(store)
-  .use(router)
-  .mount("#app");
+let app = createApp(App).use(pluginElementPlus).use(pluginApi).use(router).use(pinia).mount("#app");

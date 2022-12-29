@@ -1,23 +1,16 @@
+let { defineConfig } = require("@vue/cli-service");
 let path = require("path");
-let config = require("./env.config.js")[process.env.NODE_ENV];
+let config = require("./env.config");
 
-module.exports = {
+module.exports = defineConfig({
+  transpileDependencies: true,
+
   // Проксируем запросы - чтобы нормально работать с куками
   devServer: {
     proxy: {
       "^/api/": { target: config.serverApi },
     },
-    disableHostCheck: true,
   },
-  // Глобальные переменные для SASS
-  css: {
-    loaderOptions: {
-      sass: {
-        prependData: `@import "~@/assets/style/_variables.sass";  @import "~@/assets/style/_mixins.sass";`,
-      },
-    },
-  },
-
   configureWebpack: {
     module: {
       // PUG
@@ -26,10 +19,10 @@ module.exports = {
           test: /\.pug$/,
           loader: "pug-plain-loader",
           options: {
-            basedir: path.resolve(__dirname, ""),
+            basedir: path.resolve(__dirname, "") + "/src",
           },
         },
       ],
     },
   },
-};
+});

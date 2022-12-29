@@ -1,4 +1,4 @@
-{
+module.exports = {
   // Максимальная длина строки
   printWidth: 100,
   // Отступ
@@ -19,4 +19,4 @@
   quoteProps: "as-needed",
   // Добавляет скобки функции стрелки "(x) => x" или "x => x"
   arrowParens: "always",
-}
+};
